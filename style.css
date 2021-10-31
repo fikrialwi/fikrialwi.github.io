@@ -1,0 +1,523 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --green : #2DD986;
+    --cardBg: linear-gradient(154.92deg, #31D787 21.77%, #1B8954 95.68%);
+    --orange: #FE8E28;
+}
+header{
+    height: 100vh;
+    width: 100vw;
+}
+nav{
+    width: 100vw;
+    height: 75px;
+    box-sizing: border-box;
+    padding:0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.identity{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.identity img{
+    width: 30px;
+    cursor: pointer;
+}
+.menu{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+.menu a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s linear;
+}
+.menu a:hover{
+    color: var(--green)
+}
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+.logo img{
+    height: 20px;
+}
+header, .container{
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.promosi, .produk{
+    width: 50%;
+    display: flex;
+}
+.promosi{
+    flex-direction: column;
+    padding-left: 50px;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+.promosi h1{
+    color: #000;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.promosi h1 span{
+    color: var(--green);
+    line-height: 50px;
+}
+.promosi>span{
+    width: 250px;
+    height: 3px;
+    background: #000;
+    margin-bottom: 5px;
+}
+.promosi p{
+    width: 70%;
+}
+.produk{
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+.topWeek{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 300px;
+    height: 425px;
+    background: linear-gradient(154.92deg, #31D787 21.77%, #1B8954 95.68%);
+    border-radius: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: 0px 5px 20px rgba(85, 85, 85, .6);
+    transform: scale(.95);
+    transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: auto;
+}
+.idProduk{
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 10px;
+    color: white;
+    height: 25%;
+}
+.idProduk h2{
+    font-style: italic;
+    font-weight: 700;
+}
+.idProduk p{
+    font-size: 15px;
+}
+.idProduk span{
+    text-decoration:line-through;
+}
+.idProduk p:last-child{
+    color:var(--orange);
+    font-weight: 700;
+}
+.buyBtn{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.buyBtn button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    padding: 0;
+    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.buyBtn button:first-child{
+    background: var(--orange);
+}
+.buyBtn button:last-child{
+    background: transparent;
+    border: 2px solid white;
+}
+.card:hover{
+    transform: scale(1.01);
+}
+.buyBtn button:first-child:hover{
+    filter:saturate(3.5)
+}
+.buyBtn button:active{
+    animation: bounce .3s cubic-bezier(0.215, 0.610, 0.355, 1) 1 ;
+}
+.buyBtn button:last-child:hover{
+    background: #fff;
+    color:#000;
+}
+.bullet{
+    height:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bullet span{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 70%;
+    margin: 3px 5px;
+}
+.bullet span:first-child{
+    opacity: 100%;
+}
+.bullet span:hover{
+    opacity: 90%;
+}
+.card .image{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .image img{
+    height: 300px;
+    position: absolute;
+}
+
+.title{
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+.img_topWeek{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    grid-gap: 30px;
+    place-items: center;
+    padding: 10px;
+}
+.cardTW{
+    width: 300px;
+    height: 400px;
+    background:#fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.imTW:active{
+    animation:bounce .5s cubic-bezier(0.215, 0.610, 0.355, 1) 1 ;
+}
+.imTW{
+    width: 90%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.imTW>img{
+    margin: auto;
+    width: 95%;
+    height: auto;
+    object-position: center;
+    object-fit: contain;
+    
+}
+.ketProduk{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.star{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100px;
+}
+.star img{
+    width: 20px;
+    margin-right: 5px;
+}
+.star img:hover{
+    filter:drop-shadow(0px 1px 5px rgb(238, 255, 0))
+}
+#love, #cart{
+    position: absolute;
+    width: 25px;
+    cursor: pointer;
+}
+#cart{
+    top:15px;
+    left:20px;
+    width: 30px;
+}
+#love{
+    top:15px;
+    right: 20px;
+}
+#love:hover{
+    filter: drop-shadow(0px 2px 5px rgb(245, 29, 29));
+    transform: scale(1.1);
+}
+#love:active{
+    animation: bounce .5s cubic-bezier(0.215, 0.610, 0.355, 1) 1 ;
+}
+#cart:hover{
+    filter: drop-shadow(0px 2px 5px var(--orange));
+    transform: scale(1.1);
+}
+#cart:active{
+    animation: bounce .5s cubic-bezier(0.215, 0.610, 0.355, 1) 1 ;
+}
+.nameProduk p:first-child{
+    margin-bottom: 5px;
+    font-weight: bold;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.nameProduk p:first-child:hover{
+    text-decoration: underline;
+    color:var(--green)
+}
+.nameProduk p:first-child:active{
+    animation: bounce .3s cubic-bezier(0.215, 0.610, 0.355, 1) 1 ;;
+}
+.nameProduk{
+    padding-left: 10px;
+}
+.lastest .title{
+    margin-top: 50px;
+}
+.img-lastest{
+    width: calc(100vh+200px);
+    height: 350px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 20px;
+}
+.card_latest{
+    width: 250px;
+    height: 300px;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(105, 105, 105, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.card_img{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card_img img{
+    width: auto;
+    height: 90%;
+    object-position: center;
+    object-fit: contain;
+}
+.card_img img:hover{
+    transform: scale(1.1);
+}
+.ket_lastest{
+    padding: 10px 15px;
+    height: 30%;
+    background:linear-gradient(180deg, #ffffff 0%, #31D787 100%);
+}
+.ket_lastest p{
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ket_lastest p:first-child{
+    font-weight: 500;
+}
+.ket_lastest p:first-child:hover{
+    color: var(--orange);
+    text-decoration: underline;
+}
+.ket_lastest p:last-child{
+    font-size: 14px;
+}
+.squares{
+    width: 250px;
+    height: 50px;
+    background: #fff;
+    display: flex;
+    align-items: end;
+    margin: auto;
+}
+.squares>span{
+    width: 20%;
+    height: 5px;
+    background: var(--orange);
+    border: white 1px solid;
+}
+.squares>span:hover{
+    opacity: .8;
+    transform: scaleY(1.1);
+}
+.squares>.active{
+    height: 10px;
+}
+.category{
+    padding: 0 100px;
+}
+.produks_category{
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.produk_category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 300px 200px;
+    background-position: center;
+    background-blend-mode: darken;
+    border-radius: 20px;
+    width: 300px;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.men{
+    background-image:url(img/bgCategory/alonso-reyes-0HlI76m4jxU-unsplash.jpg),linear-gradient(180deg, rgb(141, 141, 141) 0%, rgba(0,0,0,.5) 100%);   
+}
+.women{
+    background-image:url(img/bgCategory/walter-lee-olivares-de-la-cruz-9S44Zk3pZyc-unsplash.jpg),linear-gradient(180deg, rgb(141, 141, 141) 0%, rgba(0,0,0,.5) 100%);  
+    background-size: cover;
+}
+.kids{
+    background-image:url(img/bgCategory/debra-brewster-AvGIpReokFM-unsplash.jpg),linear-gradient(180deg, rgb(141, 141, 141) 0%, rgba(0,0,0,.5) 100%);  
+}
+.sport{
+    background-image:url(img/bgCategory/miguel-a-amutio-hBfiJshiBvc-unsplash.jpg),linear-gradient(180deg, rgb(141, 141, 141) 0%, rgba(0,0,0,.5) 100%);  
+}
+.lifestyle{
+    background-image:url(img/bgCategory/erik-brolin-wmZNEGkcsmw-unsplash.jpg),linear-gradient(180deg, rgb(141, 141, 141) 0%, rgba(0,0,0,.5) 100%);
+    background-size: cover;  
+}
+.top{
+    background-image:url(img/bgCategory/museums-victoria-zGrXNvgr6AE-unsplash.jpg),linear-gradient(180deg, rgb(141, 141, 141) 0%, rgba(0,0,0,.5) 100%);
+    background-size: cover;  
+}
+.produk_category h3 a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+.produk_category:hover{
+    background-size: 400px auto;
+}
+.produk_category h3:hover{
+    text-decoration: underline;
+}
+footer{
+    width: 100vw;
+    height: 50vh;
+    background: rgb(2, 15, 7);
+    color: rgb(221, 221, 221);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.category_footer, .contact, .Toko22{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-right: 1px solid #fff;
+    height: 100%;
+}
+.category_footer{
+    border-right: none;
+}
+.category_footer h3, .contact h3, .Toko22 h3{
+    padding: 20px 0;
+}
+.list-contact, .list-category{
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    width: 100%;
+}
+.list-contact a, .list-category a{
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(221, 221, 221);
+}
+.list-contact a:hover{
+    text-decoration: underline;
+}
+.list-contact a img{
+    height: 13px;
+    width: 13px;
+    margin-right: 5px;
+}
+.Toko22 p{
+    width: 70%;
+    font-size: 14px;
+}
+.Toko22 p a{
+    color: rgb(221,221,221);
+}
+.Toko22 p a img{
+    width: 13px;
+    filter: drop-shadow(0px 0px 1px #fff);
+    margin-right: 5px;
+}
+@keyframes bounce {
+    0%{
+        transform: scale(.9);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+    
+}
